@@ -2,6 +2,8 @@ kind: ClusterSelector
 apiVersion: configmanagement.gke.io/v1
 metadata:
   name: selector-env-prod
+  annotations:
+    anthos.cft.dev/team-namespace-name: prod
 spec:
   selector:
     matchLabels:
