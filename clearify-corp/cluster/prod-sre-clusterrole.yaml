@@ -1,0 +1,11 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: sre
+  annotations:
+    configmanagement.gke.io/cluster-selector: selector-env-prod
+rules:
+- apiGroups: [""] 
+  resources: ["pods","services","namespaces","deployments","jobs"] 
+  verbs:
+  - "*"
