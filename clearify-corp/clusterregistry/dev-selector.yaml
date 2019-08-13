@@ -3,7 +3,7 @@ apiVersion: configmanagement.gke.io/v1
 metadata:
   name: selector-env-dev
   annotations:
-    anthos.cft.dev/team-namespace-name: dev
+    anthos.cft.dev/team-namespace-suffix: dev
 spec:
   selector:
     matchLabels:
