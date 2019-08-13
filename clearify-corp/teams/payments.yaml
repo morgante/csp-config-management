@@ -4,7 +4,7 @@ metadata:
   name: payments
 spec:
   roles:
-  - role: manager
+  - role: sre
     users:
     - jane@clearify.co
   - role: developer
