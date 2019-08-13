@@ -5,6 +5,8 @@ metadata:
 subjects:
 - kind: User
   name: basic@clearify.co
+- kind: Group
+  name: payments-developers@clearify.co
 roleRef:
   kind: ClusterRole
   name: developer
