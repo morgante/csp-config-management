@@ -25,8 +25,8 @@ openAPI:
       x-k8s-cli:
         setter:
           name: org-id
-          setBy: PLACEHOLDER
-          value: ${ORG_ID?}
+          value: my-org
+          isSet: true
     io.k8s.cli.setters.project-id:
       description: ID of project
       x-k8s-cli:
