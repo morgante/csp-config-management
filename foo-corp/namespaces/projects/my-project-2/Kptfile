@@ -1,0 +1,36 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: simple-project
+upstream:
+  type: git
+  git:
+    commit: e910776b94020df3dd41bbf3f7511db8ad9ecada
+    repo: https://github.com/morgante/csp-config-management
+    directory: packages/project-factory
+    ref: kpt-pfactory
+packageMetadata:
+  shortDescription: A simple project
+openAPI:
+  definitions:
+    io.k8s.cli.setters.billing-account:
+      description: ID of billing account
+      x-k8s-cli:
+        setter:
+          isSet: true
+          name: billing-account
+          value: my-account
+    io.k8s.cli.setters.org-id:
+      description: organization ID for associated services
+      x-k8s-cli:
+        setter:
+          isSet: true
+          name: org-id
+          value: my-org
+    io.k8s.cli.setters.project-id:
+      description: ID of project
+      x-k8s-cli:
+        setter:
+          name: project-id
+          value: cft-project-2
+          isSet: true
